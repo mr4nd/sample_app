@@ -75,6 +75,17 @@ describe User do
     it { should_not be_valid }
   end
 
+  describe "email address with mixed example" do
+    let(:mixed_case_email) { "UsEr@ExamPlE.COm" }
+
+    it "should be saved as all lowercase" do
+      @user.email = mixed_case_email
+      @user.save
+      @user.reload.email.should == mixed_case_email.downcase
+    end
+    
+  end
+
   # Password Tests
 
   describe "when password is too short (< 6chrs)" do
@@ -111,7 +122,5 @@ describe User do
       it { should_not == user_with_invalid_password }
       specify { user_with_invalid_password.should be_false }
     end
-    
   end
-
 end

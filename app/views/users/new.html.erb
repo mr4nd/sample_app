@@ -1,4 +1,25 @@
 <% provide(:title, "Sign up") %>
 
 <h1><%= yield(:title) %></h1>
-<p>Sing Up to Tuit!</p>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email, "Email" %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password, "Password" %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Password Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Sign Up!", class: "btn btn-large btn-primary"%>
+    <% end %>
+  </div>
+</div>
+

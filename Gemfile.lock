@@ -58,6 +58,11 @@ GEM
     eventmachine (0.12.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (3.3.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (3.3.0)
+      factory_girl (~> 3.3.0)
+      railties (>= 3.0.0)
     ffi (1.0.11)
     guard (1.1.1)
       listen (>= 0.4.2)
@@ -176,6 +181,7 @@ DEPENDENCIES
   bootstrap-sass (= 2.0.3.1)
   capybara (= 1.1.2)
   coffee-rails (= 3.2.2)
+  factory_girl_rails (= 3.3.0)
   guard-livereload
   guard-rspec
   guard-spork
