@@ -7,15 +7,17 @@ gem 'jquery-rails', '2.0.2'
 group :development, :test do
   gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.10.1'
-  gem 'guard-rspec'
-  gem 'guard-livereload'
+  gem 'guard-rspec', '1.0.0'
+  gem 'guard-livereload', '1.0.0'
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.7.2'
   gem 'spork', '0.9.2'
-  gem 'guard-spork'
+  gem 'guard-spork','1.0.0'
   gem 'annotate', '~> 2.4.1.beta'
   gem 'factory_girl_rails', '3.3.0'
+  gem 'faker', '1.0.1'
+  gem 'will_paginate', '3.0.3'
 end
 
 
@@ -26,6 +28,7 @@ group :assets do
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.4'
   gem 'bootstrap-sass', '2.0.3.1'
+  gem 'bootstrap-will_paginate', '0.0.6'
 end
 
 group :production do
